@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>NowPlaying-Discord</title>
+</head>
+
+<body>
+    <h1>下にある枠内の文字列をDiscordのDMに貼り付けてください</h1>
+    <p class="description">PCの場合文字の上を3回クリックするとうまく選択できます</p>
+    <div class="codeblock">
+        <p id="code"></p>
+    </div>
+</body>
+<script>
+    let params = new URLSearchParams(document.location.search.substring(1));
+    document.getElementById("code").innerText = params.get("code");
+</script>
+
+</html>
